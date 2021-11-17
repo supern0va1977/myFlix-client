@@ -22756,21 +22756,21 @@ class MainView extends _reactDefault.default.Component {
             movies: [
                 {
                     _id: 1,
-                    Title: 'Inception',
-                    Description: 'desc1...',
-                    ImagePath: 'https://m.media-amazon.com/images/M/MV5BYWZjMjk3ZTItODQ2ZC00NTY5LWE0ZDYtZTI3MjcwN2Q5NTVkXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_.jpg'
+                    Title: 'Avatar',
+                    Description: 'A paraplegic Marine dispatched to the moon Pandora on a unique mission',
+                    ImagePath: 'https://m.media-amazon.com/images/I/51TIUdSaBUL._SY445_.jpg'
                 },
                 {
                     _id: 2,
-                    Title: 'The Shawshank Redemption',
-                    Description: 'desc2...',
-                    ImagePath: '...'
+                    Title: 'Transformers',
+                    Description: 'An ancient struggle between two Cybertronian races',
+                    ImagePath: 'https://m.media-amazon.com/images/I/51REhA8e-gL._SY445_.jpg'
                 },
                 {
                     _id: 3,
-                    Title: 'Gladiator',
-                    Description: 'desc3...',
-                    ImagePath: '...'
+                    Title: 'Prometheus',
+                    Description: 'Following clues to the origin of mankind a team finds a structure',
+                    ImagePath: 'https://m.media-amazon.com/images/I/91mgd1UYdvL._SX342_.jpg'
                 }
             ],
             selectedMovie: null
