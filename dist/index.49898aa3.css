@@ -1,0 +1,18 @@
+.movie-card {
+  display: inline-block;
+}
+
+.movieCard {
+  width: 100%;
+  margin: 20px;
+}
+
+.cardImage {
+  width: 100% !important;
+  height: 200px !important;
+  object-fit: cover;
+}
+.my-flix {
+  color: steelblue;
+}
+/*# sourceMappingURL=index.49898aa3.css.map */
