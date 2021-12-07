@@ -1,52 +1,78 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import { Navbar, Nav, Form, Button, Card, CardGroup, Container, Row, Col } from 'react-bootstrap';
 
+import './registration-view.scss';
 export function RegistrationView (props) {
+  const [ username, setUsername ] = useState('');
+  const [ password, setPassword ] = useState('');
+  const [ email, setEmail ] = useState('');
+  const [ Birthday, setBirthday ] = useState('');
 
-    const [ username, setUsername ] = useState('');
-    const [ password, setPassword ] = useState('');
-    const [ firstname, setFirstname ] = useState('');
-    const [ lastname, setLastname ] = useState('');
-    const [ email, setEmail ] = useState('');
-    const [ birthdate, setBirthdate ] = useState('');
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log(username, password, email, Birthday);
+    props.onRegistration(username);
+  };
 
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        console.log(username, password, email, birthdate);
-        props.onRegistration(username);
-    }
+  return (
 
-    return (
-        <form>
-            <label>
-                First name:
-                <input type="text" value = { firstname } onChange = {event => setFirstname(event.target.value)} />
-            </label>
-            <label>
-                Last name:
-                <input type="text" value = { lastname } onChange = {event => setLastname(event.target.value)} />
-            </label>
-            <label>
-                Email:
-                <input type="email" value = { email } onChange = {event => setEmail(event.target.value)} />
-            </label>
-            <label>
-                Username:
-                <input type="text" value = { username } onChange = {event => setUsername(event.target.value)} />
-            </label>
-            <label>
-                Password:
-                <input type="password" value = { password } onChange = {event => setPassword(event.target.value)} />
-            </label>
-            <label>
-                Birthday:
-                <input type="date" value = { birthdate} onChange = {event => setBirthdate(event.target.value)} />
-            </label>
-            <button type="submit" onClick = {handleSubmit}>Sign Up</button>
-        </form>
-    )
-}
 
+    <Container fluid className="registerContainer" >
+
+        <Navbar bg="navColor" variant="dark" expand="lg">
+          <Container fluid>
+            <Navbar.Brand href="#home">myFlix</Navbar.Brand>
+            <Nav className="me-auto">
+              <Nav.Link href="#logout">Register</Nav.Link>
+            </Nav>
+          </Container>
+        </Navbar>
+
+
+
+      <Row>
+        <Col>
+          <CardGroup>
+            <Card className="registerCard">
+              <Card.Body>
+                <Card.Title className="text-center">Welcome to The Movies.</Card.Title>
+                <Card.Subtitle className="mb-2 text-muted text-center">Registration is required</Card.Subtitle>
+
+                <Form>
+                  <Form.Group>
+                    <Form.Label>Username</Form.Label>
+                    <Form.Control type="text" value={username} onChange={e => setUsername(e.target.value)} />
+                  </Form.Group>
+
+                  <Form.Group>
+                    <Form.Label>Password</Form.Label>
+                    <Form.Control type="password" value={password} onChange={e => setPassword(e.target.value)} />
+                  </Form.Group>
+
+                  <Form.Group>
+                    <Form.Label>Email</Form.Label>
+                    <Form.Control type="email" value={email} onChange={e => setEmail(e.target.value)} />
+                  </Form.Group>
+
+                  <Form.Group>
+                    <Form.Label>Birthday</Form.Label>
+                    <Form.Control className="mb-3" type="date" value={Birthday} onChange={e => setBirthday(e.target.value)} />
+                  </Form.Group>
+
+                  <Button className="registerButton" variant="secondary" size="lg" type="submit" onClick={handleSubmit}>Register</Button>
+
+                </Form>
+              </Card.Body>
+            </Card>
+        </CardGroup>
+        </Col>
+      </Row>
+    </Container>
+
+
+  );
+}    
 
 RegistrationView.propTypes = {
     onRegistration: PropTypes.func.isRequired
