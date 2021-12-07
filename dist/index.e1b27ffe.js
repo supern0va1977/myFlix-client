@@ -24677,7 +24677,7 @@ function LoginView(props) {
                                 columnNumber: 11
                             },
                             __self: this,
-                            children: "Welcome to CinemaFlix."
+                            children: "Welcome to MyFlix."
                         }),
                         /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Card.Subtitle, {
                             className: "mb-2 text-muted text-center",

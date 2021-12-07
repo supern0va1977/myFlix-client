@@ -30,7 +30,7 @@ export function LoginView(props) {
     
       <Card className="loginCard">
         <Card.Body>
-          <Card.Title className="text-center">Welcome to CinemaFlix.</Card.Title>
+          <Card.Title className="text-center">Welcome to MyFlix.</Card.Title>
           <Card.Subtitle className="mb-2 text-muted text-center">Please Login</Card.Subtitle>
       
           <Form >
