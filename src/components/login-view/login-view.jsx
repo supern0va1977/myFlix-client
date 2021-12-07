@@ -21,7 +21,7 @@ export function LoginView(props) {
 
       <Navbar bg="navColor" variant="dark" expand="lg">
         <Container fluid>
-          <Navbar.Brand href="#home">CinemaFlix</Navbar.Brand>
+          <Navbar.Brand href="#home">MyFlix</Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link href="#logout">Login</Nav.Link>
           </Nav>

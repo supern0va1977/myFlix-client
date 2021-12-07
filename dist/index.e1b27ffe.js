@@ -22872,7 +22872,7 @@ class MainView extends _reactDefault.default.Component {
                                     columnNumber: 19
                                 },
                                 __self: this,
-                                children: "CinemaFlix"
+                                children: "MYFlix"
                             }),
                             /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Nav, {
                                 className: "me-auto",
@@ -24629,7 +24629,7 @@ function LoginView(props) {
                                 columnNumber: 11
                             },
                             __self: this,
-                            children: "CinemaFlix"
+                            children: "MyFlix"
                         }),
                         /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Nav, {
                             className: "me-auto",
