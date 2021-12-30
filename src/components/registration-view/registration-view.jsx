@@ -7,11 +7,10 @@ export function RegistrationView (props) {
   const [ username, setUsername ] = useState('');
   const [ password, setPassword ] = useState('');
   const [ email, setEmail ] = useState('');
-  const [ Birthday, setBirthday ] = useState('');
-
+  
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(username, password, email, Birthday);
+    console.log(username, password, email, );
     props.onRegistration(username);
   };
 
@@ -55,11 +54,7 @@ export function RegistrationView (props) {
                     <Form.Control type="email" value={email} onChange={e => setEmail(e.target.value)} />
                   </Form.Group>
 
-                  <Form.Group>
-                    <Form.Label>Birthday</Form.Label>
-                    <Form.Control className="mb-3" type="date" value={Birthday} onChange={e => setBirthday(e.target.value)} />
-                  </Form.Group>
-
+                  
                   <Button className="registerButton" variant="secondary" size="lg" type="submit" onClick={handleSubmit}>Register</Button>
 
                 </Form>
